@@ -8,7 +8,7 @@ new hidden word. Game ends after 3 correct or 3 wrong guesses.
 FILES
 src/main/java/Main.java  - the program
 docs/                    - uml and pseudocode
-src/test/tests.txt           - test cases
+src/test/tests.txt       - test cases
 
 HOW TO RUN
 1. Open the project in IntelliJ.
