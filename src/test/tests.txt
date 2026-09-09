@@ -1,0 +1,34 @@
+Test 1: Correct guess, same case
+Input: word to guess is "summer's", user types "summer's"
+Expected: Correct
+Actual: Correct
+
+Test 2: Correct guess, different case
+Input: word to guess is "summer's", user types "SUMMER'S"
+Expected: Correct
+Actual: Correct
+
+Test 3: Correct guess with extra spaces
+Input: word to guess is "summer's", user types "  summer's  "
+Expected: Correct
+Actual: Correct
+
+Test 4: Wrong guess
+Input: word to guess is "summer's", user types "winter's"
+Expected: Incorrect
+Actual: Incorrect
+
+Test 5: Sonnet cuts off at the right word
+Input: words = ["Shall", "I", "compare", "thee"], stop at word 2
+Expected: "Shall I _____"
+Actual: "Shall I _____"
+
+Test 6: Game ends after 3 correct guesses
+Input: user guesses 3 words correctly in a row
+Expected: "Congratulations! You won the game!"
+Actual: "Congratulations! You won the game!"
+
+Test 7: Game ends after 3 wrong guesses
+Input: user guesses 3 words incorrectly in a row
+Expected: "Game Over! Better luck next time."
+Actual: "Game Over! Better luck next time."

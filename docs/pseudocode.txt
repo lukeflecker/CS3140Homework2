@@ -1,0 +1,18 @@
+split sonnet into words
+correct = 0
+incorrect = 0
+
+while correct < 3 and incorrect < 3:
+    pick random word to hide
+    show sonnet up to that word, then underscores
+    ask user to guess
+    if guess matches word:
+        correct += 1
+    else:
+        incorrect += 1
+    show score
+
+if correct == 3:
+    print "you won"
+else:
+    print "game over"
