@@ -1,7 +1,7 @@
 Main
 ----
-SONNET (String)          - the full sonnet text
+SONNET (String)                     - the full sonnet text
 
-main()                    - runs the game loop, reads guesses, tracks score
-isCorrectGuess(guess, word)      - checks if guess matches word
-buildTruncatedSonnet(words, i)   - builds sonnet text cut off at word i
+main()                              - runs the game loop, reads guesses, tracks score
+isCorrectGuess(guess, word)         - checks if guess matches word
+buildTruncatedSonnet(words, i)      - builds sonnet text cut off at word i
