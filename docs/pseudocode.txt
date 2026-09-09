@@ -1,18 +1,43 @@
-split sonnet into words
-correct = 0
-incorrect = 0
+main(args):
+    sonnet = buildSonnet()
+    words = sonnet split by spaces
+    correct = 0
+    incorrect = 0
 
-while correct < 3 and incorrect < 3:
-    pick random word to hide
-    show sonnet up to that word, then underscores
-    ask user to guess
-    if guess matches word:
-        correct += 1
+    print welcome message
+
+    while correct < 3 and incorrect < 3:
+        randomIndex = random number from 0 to words.length - 1
+        word = words[randomIndex]
+
+        print buildTruncatedSonnet(words, randomIndex)
+
+        guess = read user input
+
+        if isCorrectGuess(guess, word):
+            correct = correct + 1
+            print "Correct! The word was: " + word
+        else:
+            incorrect = incorrect + 1
+            print "Incorrect. The word was actually: " + word
+
+        print current score
+
+    if correct == 3:
+        print "Congratulations! You won the game!"
     else:
-        incorrect += 1
-    show score
+        print "Game Over! Better luck next time."
 
-if correct == 3:
-    print "you won"
-else:
-    print "game over"
+
+isCorrectGuess(guess, actualWord):
+    if guess is null or actualWord is null:
+        return false
+    return trim(guess) equals trim(actualWord), ignoring case
+
+
+buildTruncatedSonnet(words, stopIndex):
+    result = ""
+    for i from 0 to stopIndex - 1:
+        result = result + words[i] + " "
+    result = result + "_____"
+    return result

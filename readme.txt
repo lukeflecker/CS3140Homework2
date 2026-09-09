@@ -1,19 +1,25 @@
-Prithee - Sonnet Word Guessing Game
+Prithee
 
-WHAT IT DOES
-The program shows Sonnet 18 but hides one random word with underscores.
-You guess the word. It tells you if you were right, then repeats with a
-new hidden word. Game ends after 3 correct or 3 wrong guesses.
+How to Run
+----------
+Run Main.java. The program will print the sonnet in the console.
 
-FILES
-src/main/java/Main.java  - the program
-docs/                    - uml and pseudocode
-src/test/tests.txt       - test cases
+If you cannot remember the next word when prompted, just type your best
+guess. The program keeps going until you get 3 words right or 3 words
+wrong.
 
-HOW TO RUN
-1. Open the project in IntelliJ.
-2. Let Gradle sync.
-3. Open Main.java (src/main/java) and click the green run button.
+Rules Used
+----------
+- One random word in the sonnet is hidden with underscores each round.
+- You are prompted to guess the hidden word.
+- Guesses are not case sensitive and ignore extra spaces.
+- A correct guess adds 1 to your correct count. A wrong guess adds 1 to
+  your incorrect count.
+- The game ends once you reach 3 correct or 3 incorrect guesses.
 
-HOW TO TEST
-Open src/test/tests.txt to see test cases and expected results.
+Files
+-----
+src/main/java/Main.java - the program
+src/test/tests.txt - test cases with inputs, expected outputs, and actual outputs
+docs/Main-uml.txt - UML file for Main.java
+docs/psuedocode.txt - Pseudocode for the Main.java file

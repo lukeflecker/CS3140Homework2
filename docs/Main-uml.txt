@@ -1,7 +1,23 @@
 Main
-----
-SONNET (String)                     - the full sonnet text
+-------------------------------------------------
++ main(args: String[]): void
+- isCorrectGuess(guess: String, actualWord: String): boolean
+- buildTruncatedSonnet(words: String[], stopIndex: int): String
+- buildSonnet(): String
+-------------------------------------------------
 
-main()                              - runs the game loop, reads guesses, tracks score
-isCorrectGuess(guess, word)         - checks if guess matches word
-buildTruncatedSonnet(words, i)      - builds sonnet text cut off at word i
+main(args)
+    sonnet: String - full sonnet text
+    words: String[] - sonnet split into words
+    correct: int - correct guesses so far
+    incorrect: int - incorrect guesses so far
+    randomIndex: int - index of the word being hidden this round
+    word: String - the hidden word
+    guess: String - user's input
+
+isCorrectGuess(guess, actualWord)
+    returns: boolean - true if guess matches actualWord, ignoring case and spacing
+
+buildTruncatedSonnet(words, stopIndex)
+    sb: StringBuilder - builds the visible part of the sonnet
+    returns: String - words before stopIndex, followed by underscores
